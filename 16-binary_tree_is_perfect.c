@@ -5,25 +5,25 @@
  *
  * Return: 1 si l'arbre est parfait, 0 sinon
  */
- 
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    size_t h_g, h_d;
+	size_t h_g, h_d;
 
-    if (tree == NULL)
-    {
-        return (0);
-    }
-    if (binary_tree_is_full(tree) == 0)
-    {
-        return (0);
-    }
-    h_g = binary_tree_height(tree->left);
-    h_d = binary_tree_height(tree->right);
+	if (tree == NULL)
+	{
+		return (0);
+	}
+	if (binary_tree_is_full(tree) == 0)
+	{
+		return (0);
+	}
+	h_g = binary_tree_height(tree->left);
+	h_d = binary_tree_height(tree->right);
 
-    if (h_d != h_g)
-    {
-        return (0);
-    }
-    return (1);
+	if (h_d != h_g)
+	{
+		return (0);
+	}
+	return (1);
 }
